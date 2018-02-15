@@ -22,6 +22,15 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var opt3: UIButton!
     @IBOutlet weak var opt4: UIButton!
     
+    @IBAction func answerT(_ sender: UIButton) {
+        opt1.backgroundColor = UIColor.lightGray
+        opt2.backgroundColor = UIColor.lightGray
+        opt3.backgroundColor = UIColor.lightGray
+        opt4.backgroundColor = UIColor.lightGray
+        sender.backgroundColor = UIColor.blue
+        selectedAnswer = sender.tag
+    }
+   
     @IBAction func submit(_ sender: Any) {
         let answerViewController = self.storyboard?.instantiateViewController(withIdentifier: "answerView") as! AnswerViewController
         answerViewController.topic = self.topic
@@ -31,7 +40,8 @@ class QuestionViewController: UIViewController {
         answerViewController.correctCount = self.correctCount
         self.present(answerViewController, animated: false, completion: nil)
     }
-    
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         question = topic?.questions[questionNum - 1]

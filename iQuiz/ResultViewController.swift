@@ -23,11 +23,11 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
         percent = Double(correctCount) / Double(total)
         if percent < 0.5 {
-            resLabel.text = "You suck"
+            resLabel.text = "Fail!"
         } else if percent >= 0.5 && percent < 0.75 {
-            resLabel.text = "Better Luck next time"
+            resLabel.text = "Almost!"
         } else {
-            resLabel.text = "Nice! Keep it up! ;)"
+            resLabel.text = "Perfect!"
         }
         
         scoreLabel.text = "\(correctCount) out of \(total)"

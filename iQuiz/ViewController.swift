@@ -29,7 +29,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         })
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return topicList.count
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomTableViewCell
+        let topic =  self.topicList[indexPath.row]
+        cell.qImg.image = UIImage(named: topic.topicIcon + ".jpg")
+        cell.qName.text = topic.topicTitle
+        cell.qDisc.text = topic.topicDescription
+        return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("cell #\(indexPath.row) selected")
+        let questionViewController = self.storyboard?.instantiateViewController(withIdentifier: "questionView") as! QuestionViewController
+        questionViewController.topic = self.topicList[indexPath.row]
+        self.present(questionViewController, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,23 +76,5 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Dispose of any resources that can be recreated.
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return topicList.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomTableViewCell
-        let topic =  self.topicList[indexPath.row]
-        cell.qImg.image = UIImage(named: topic.topicIcon + ".jpg")
-        cell.qName.text = topic.topicTitle
-        cell.qDisc.text = topic.topicDescription
-        return cell
-    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("cell #\(indexPath.row) selected")
-        let questionViewController = self.storyboard?.instantiateViewController(withIdentifier: "questionView") as! QuestionViewController
-        questionViewController.topic = self.topicList[indexPath.row]
-        self.present(questionViewController, animated: true, completion: nil)
-    }
 }
 

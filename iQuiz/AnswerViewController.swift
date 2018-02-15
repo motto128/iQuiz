@@ -10,15 +10,16 @@ import UIKit
 
 class AnswerViewController: UIViewController {
     
+    
+    @IBOutlet weak var currQ: UILabel!
+    @IBOutlet weak var corrA: UILabel!
+    @IBOutlet weak var descA: UILabel!
+    
     var currentQuestion: Question?
     var topic: Topic?
     var answer = 0
     var correctCount = 0
     var questionNum = 1
-    
-    @IBOutlet weak var currQ: UILabel!
-    @IBOutlet weak var corrA: UILabel!
-    @IBOutlet weak var descA: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
