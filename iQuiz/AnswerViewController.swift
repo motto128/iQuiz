@@ -28,15 +28,10 @@ class AnswerViewController: UIViewController {
             correctCount += 1
             descA.text = "You are correct"
         } else {
-            descA.text = "Incorrect Answer :("
+            descA.text = "Incorrect Answer"
         }
 
         // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func nextBtn(_ sender: Any) {
@@ -50,15 +45,17 @@ class AnswerViewController: UIViewController {
             self.present(resultViewController, animated: true, completion: nil)
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let questionView = segue.destination as! QuestionViewController
+        questionView.topic = self.topic
+        questionNum += 1
+        questionView.questionNum = self.questionNum
+        questionView.correctCount = self.correctCount
     }
-    */
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+ 
 
 }
