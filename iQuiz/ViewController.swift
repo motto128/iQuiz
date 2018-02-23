@@ -17,7 +17,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var url = "http://tednewardsandbox.site44.com/questions.json"
     var settings = UserDefaults.standard.string(forKey: "settings-url")
     let refresher = UIRefreshControl()
-    var iconArray = ["science", "marvel", "math"]
+    var iconArray = ["sci", "marvel", "math"]
     
     
     @IBAction func settingBtn(_ sender: UIBarButtonItem) {

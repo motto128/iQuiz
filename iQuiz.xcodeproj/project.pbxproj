@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DEA5009D203F8C0F00F4BBAD /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA5009C203F8C0F00F4BBAD /* Connection.swift */; };
-		DEA500A1203F951A00F4BBAD /* marvel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DEA5009E203F951A00F4BBAD /* marvel.jpg */; };
-		DEA500A2203F951A00F4BBAD /* math.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DEA5009F203F951A00F4BBAD /* math.jpg */; };
-		DEA500A3203F951A00F4BBAD /* science.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DEA500A0203F951A00F4BBAD /* science.jpg */; };
 		DEBC556C2034013100D082EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBC556B2034013100D082EE /* AppDelegate.swift */; };
 		DEBC556E2034013100D082EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBC556D2034013100D082EE /* ViewController.swift */; };
 		DEBC55712034013100D082EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEBC556F2034013100D082EE /* Main.storyboard */; };
@@ -45,9 +42,6 @@
 
 /* Begin PBXFileReference section */
 		DEA5009C203F8C0F00F4BBAD /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
-		DEA5009E203F951A00F4BBAD /* marvel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = marvel.jpg; path = ../../../marvel.jpg; sourceTree = "<group>"; };
-		DEA5009F203F951A00F4BBAD /* math.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = math.jpg; path = ../../../math.jpg; sourceTree = "<group>"; };
-		DEA500A0203F951A00F4BBAD /* science.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = science.jpg; path = ../../../science.jpg; sourceTree = "<group>"; };
 		DEBC55682034013100D082EE /* iQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEBC556B2034013100D082EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEBC556D2034013100D082EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,9 +111,6 @@
 		DEBC556A2034013100D082EE /* iQuiz */ = {
 			isa = PBXGroup;
 			children = (
-				DEA5009E203F951A00F4BBAD /* marvel.jpg */,
-				DEA5009F203F951A00F4BBAD /* math.jpg */,
-				DEA500A0203F951A00F4BBAD /* science.jpg */,
 				DEBC556B2034013100D082EE /* AppDelegate.swift */,
 				DEBC556D2034013100D082EE /* ViewController.swift */,
 				DEBC556F2034013100D082EE /* Main.storyboard */,
@@ -262,11 +253,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEA500A1203F951A00F4BBAD /* marvel.jpg in Resources */,
-				DEA500A2203F951A00F4BBAD /* math.jpg in Resources */,
 				DEBC55762034013100D082EE /* LaunchScreen.storyboard in Resources */,
 				DEBC55732034013100D082EE /* Assets.xcassets in Resources */,
-				DEA500A3203F951A00F4BBAD /* science.jpg in Resources */,
 				DEBC55712034013100D082EE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
